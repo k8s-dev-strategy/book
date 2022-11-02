@@ -1,0 +1,10 @@
+namePrefix: dev-
+namespace: dev
+resources:
+- ../../base
+patchesStrategicMerge:
+- my-deploy.yaml
+configMapGenerator:
+- name: app-config
+  envs:
+  - dev.env

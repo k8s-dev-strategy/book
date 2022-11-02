@@ -1,0 +1,6 @@
+apiVersion: v2
+name: my-app
+description: My application for kubernetes study
+type: application
+version: 1.0.1
+appVersion: "1.0.0"

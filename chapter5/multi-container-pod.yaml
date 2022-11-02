@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-multi-container-pod
+spec:
+  containers:
+  - name: first-container
+    image: first-app:1.0.0
+    ports:
+    - containerPort: 8080
+  - name: second-container
+    image: second-app:1.0.0
+    ports:
+    - containerPort: 3000
+    

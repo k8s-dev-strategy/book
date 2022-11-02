@@ -1,0 +1,14 @@
+replicaCount: 2 
+image:
+  repository: my-app
+  pullPolicy: IfNotPresent
+
+serviceAccount:
+  create: false 
+
+service:
+  type: ClusterIP
+  port: 8080
+
+autoscaling:
+  enabled: false

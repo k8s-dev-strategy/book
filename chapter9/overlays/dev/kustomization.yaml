@@ -1,0 +1,6 @@
+namespace: dev
+namePrefix: dev-
+resources:
+- ../../base
+patchesStrategicMerge:
+- my-deploy.yaml

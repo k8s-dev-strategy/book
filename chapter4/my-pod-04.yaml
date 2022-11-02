@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: my-container
+    image: my-app:1.0.0
+    env:
+    - name: MY_DB_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: my-app-secret
+          key: db-password
+    - name: MY_SECRET_API_KEY
+      valueFrom:
+        secretKeyRef:
+          name: my-app-secret
+          key: secret-api-key

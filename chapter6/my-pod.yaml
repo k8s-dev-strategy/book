@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  volumes:
+  - name: temp-volume
+    emptyDir: {}
+  containers:
+  - name: first-container
+    image: my-app:1.0.0
+    volumeMounts:
+    - mountPath: /temp
+      name: temp-volume
+  - name: second-container
+    image: another-app:1.0.0
+    volumeMounts:
+    - mountPath: /storages/files
+      name: temp-volume

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod-prod
+spec:
+  containers:
+  - name: my-container
+    image: my-app:1.0.0
+    ports:
+    - containerPort: 8080
+    env:
+    - name: SPRING_PROFILES_ACTIVE
+      value: "prod"

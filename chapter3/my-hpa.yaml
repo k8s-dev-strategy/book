@@ -1,0 +1,12 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: stress-hpa 
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: my-stress 
+  minReplicas: 1
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 50
